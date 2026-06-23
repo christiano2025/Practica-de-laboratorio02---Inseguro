@@ -1,0 +1,4 @@
+{% extends 'base.html' %}{% block title %}Registro vulnerable{% endblock %}{% block content %}
+<div class="card mx-auto shadow-sm" style="max-width:500px"><div class="card-body p-4"><h1 class="h3">Registro</h1><p class="text-muted">La contraseña se almacenará en texto plano.</p>
+<form method="post"><label class="form-label">Usuario</label><input class="form-control mb-3" name="username" required><label class="form-label">Contraseña</label><input class="form-control mb-3" type="password" name="password" required><button class="btn btn-danger w-100">Registrar</button></form><a class="d-block mt-3" href="{{ url_for('login') }}">Volver</a></div></div>{% endblock %}
+

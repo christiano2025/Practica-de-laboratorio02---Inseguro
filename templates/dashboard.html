@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+
+{% block title %}Panel vulnerable{% endblock %}
+
+{% block content %}
+<h1 class="h2">Panel de publicaciones</h1>
+<p>Sesión de <strong>{{ session.username }}</strong></p>
+
+<p class="alert alert-warning">
+  Para probar XSS ingrese:
+  <code>&lt;script&gt;alert("Práctica de laboratorio 02")&lt;/script&gt;</code>
+</p>
+
+<div class="card mb-4">
+  <div class="card-body">
+    <h2 class="h4">Nueva publicación</h2>
+    <form method="post" action="{{ url_for('nueva_publicacion') }}">
+      <input
+        class="form-control mb-2"
+        name="titulo"
+        placeholder="Título"
+        required
+      >
+      <textarea
+        class="form-control mb-2"
+        name="contenido"
+        placeholder="Contenido"
+        required
+      ></textarea>
+      <button class="btn btn-danger" type="submit">Publicar</button>
+    </form>
+  </div>
+</div>
+
+{% for post in publicaciones %}
+<article class="card mb-3">
+  <div class="card-body">
+    <h2 class="h4">{{ post.titulo|safe }}</h2>
+    <div>{{ post.contenido|safe }}</div>
+    <small class="text-muted">
+      {{ post.username }} · {{ post.creado_en }}
+    </small>
+    <div>
+      <a
+        class="btn btn-sm btn-outline-danger mt-2"
+        href="{{ url_for('eliminar_publicacion', post_id=post.id) }}"
+      >Eliminar mediante GET</a>
+    </div>
+  </div>
+</article>
+{% else %}
+<p>No hay publicaciones.</p>
+{% endfor %}
+{% endblock %}

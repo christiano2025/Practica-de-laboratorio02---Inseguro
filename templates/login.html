@@ -1,0 +1,5 @@
+{% extends 'base.html' %}{% block title %}Login vulnerable{% endblock %}{% block content %}
+<div class="card mx-auto shadow-sm" style="max-width:500px"><div class="card-body p-4"><h1 class="h3">Iniciar sesión</h1><p class="text-muted">Si no tiene, por favor click en crear una cuenta</p>
+<form method="post"><label class="form-label">Usuario</label><input class="form-control mb-3" name="username" required><label class="form-label">Contraseña</label><input class="form-control mb-3" type="password" name="password" required><button class="btn btn-danger w-100">Ingresar</button></form>
+<a class="d-block mt-3" href="{{ url_for('registro') }}">Crear una cuenta</a></div></div>{% endblock %}
+
