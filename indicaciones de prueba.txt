@@ -150,4 +150,4 @@ http://127.0.0.1:5000/logout
 Durante este laboratorio se pudo observar de manera práctica cómo funcionan algunas vulnerabilidades web comunes, como SQL Injection, XSS y CSRF. 
 Además, se comprendió la importancia de proteger las aplicaciones mediante validaciones, consultas seguras y mecanismos de seguridad que ayuden a evitar accesos o acciones no autorizadas.
 
-Enlace de GIT : 
+Enlace de GIT : https://github.com/christiano2025/Practica-de-laboratorio02---Inseguro.git
