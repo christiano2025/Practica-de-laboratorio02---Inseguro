@@ -1,4 +1,4 @@
-"""Aplicación deliberadamente vulnerable para un laboratorio local y aislado."""
+"""Aplicación Insegura"""
 import os
 from functools import wraps
 
