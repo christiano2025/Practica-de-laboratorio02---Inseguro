@@ -1,6 +1,9 @@
 LABORATORIO02 DE VULNERABILIDADES WEB
 Alumno: Christian Ortega Alfaro
 
+Al concentrar todo el funcionamiento solo en app.py y no implementar controles de seguridad adecuados, 
+es posible observar fácilmente las vulnerabilidades. El proposito es demostrar de forma práctica vulnerabilidades web 
+como SQL Injection, XSS y CSRF, por lo que la aplicación fue creada intencionalmente sin aplicar mecanismos de seguridad que eviten estos ataques.
 ========================================
 
 1. REQUISITOS
